@@ -12,6 +12,7 @@ namespace saray
 
             var result = CalculateLR(A);
 
+            Console.WriteLine(string.Format("A: [{0}]", string.Join(", ", A)));
             Console.WriteLine(string.Format("L: [{0}]", string.Join(", ", result.L)));
             Console.WriteLine(string.Format("R: [{0}]", string.Join(", ", result.R)));
 
@@ -20,7 +21,18 @@ namespace saray
 
         static List<int> InitialA()
         {
-            return new List<int>() { 10, 1, 1, 1, 4, 4, 2, 3, 3, 2, 2 };
+            Random r = new Random();
+            int count = r.Next(1, 10000);
+
+            List<int> result = new List<int>();
+            result.Add(count);
+            for (int i = 0; i < count; i++)
+            {
+                int rnd = r.Next(0, 10000);
+                result.Add(rnd);
+            }
+
+            return result;
         }
 
         static (List<int> L, List<int> R) CalculateLR(List<int> A)
