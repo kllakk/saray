@@ -24,8 +24,7 @@ namespace StuffLibrary
 
         public BubbleSort(List<int> list)
         {
-            List<int> List = new List<int>();
-            List.AddRange(list);
+            List = list;
         }
 
         public List<int> Sort(SortType type)
@@ -45,6 +44,9 @@ namespace StuffLibrary
 
         private List<int> BubbleSortSimple()
         {
+            List<int> result = new List<int>();
+            result.AddRange(List);
+
             Stopwatch timer = new Stopwatch();
             timer.Start();
 
@@ -71,6 +73,9 @@ namespace StuffLibrary
 
         private List<int> BubbleSortSwappedCheck()
         {
+            List<int> result = new List<int>();
+            result.AddRange(List);
+
             Stopwatch timer = new Stopwatch();
             timer.Start();
 
@@ -101,6 +106,9 @@ namespace StuffLibrary
 
         private List<int> BubbleSelectionSort()
         {
+            List<int> result = new List<int>();
+            result.AddRange(List);
+
             Stopwatch timer = new Stopwatch();
             timer.Start();
 
