@@ -117,7 +117,7 @@ namespace StuffLibrary
             {
                 int swapped = 0;
                 int min = i;
-                for (int j = i; j < result.Count - 1; j++)
+                for (int j = i; j < result.Count - (i + 1); j++)
                 {
                     if (result[j] > result[j + 1])
                     {
