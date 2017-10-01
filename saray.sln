@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bubble", "bubble\bubble.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StuffLibrary", "StuffLibrary\StuffLibrary.csproj", "{94AF55A3-9E84-417D-AA94-239C3584144E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "binarytree", "binarytree\binarytree.csproj", "{1DCC4015-7ECA-4281-B59F-1C36DA8691A2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{94AF55A3-9E84-417D-AA94-239C3584144E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94AF55A3-9E84-417D-AA94-239C3584144E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94AF55A3-9E84-417D-AA94-239C3584144E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DCC4015-7ECA-4281-B59F-1C36DA8691A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DCC4015-7ECA-4281-B59F-1C36DA8691A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DCC4015-7ECA-4281-B59F-1C36DA8691A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DCC4015-7ECA-4281-B59F-1C36DA8691A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

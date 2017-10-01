@@ -1,7 +1,6 @@
 ﻿using StuffLibrary;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 
 namespace bubble
 {
@@ -9,124 +8,27 @@ namespace bubble
     {
         static void Main(string[] args)
         {
-            List<int> A = RandomList.InitialIntList(30);
+            for (int i = 0; i < 2; i++)
+            {
+                List<int> A = RandomList.InitialIntList(300);
 
-            var result = BubbleSortSimple(A);
-            Console.WriteLine(string.Format("A = [{0}], count = {1}, time = {2}", 
-                string.Join(", ", result.list), 
-                result.count, result.time));
+                var bubble = new BubbleSort(A);
 
-            var result2 = BubbleSortSwappedCheck(A);
-            Console.WriteLine(string.Format("A = [{0}], count = {1}, time = {2}",
-                string.Join(", ", result2.list), 
-                result2.count, result2.time));
-
-            var result3 = BubbleSelectionSort(A);
-            Console.WriteLine(string.Format("A = [{0}], count = {1}, time = {2}",
-                string.Join(", ", result3.list),
-                result3.count, result3.time));
+                bubble.RegisterHandler(new BubbleSort.PrintData(PrintData));
+                
+                var result = bubble.Sort(BubbleSort.SortType.Simple);
+                var result2 = bubble.Sort(BubbleSort.SortType.SwappedCheck);
+                var result3 = bubble.Sort(BubbleSort.SortType.WithSelection);
+            }
 
             Console.ReadLine();
         }
 
-        static (List<int> list, int count, long time) BubbleSortSimple(List<int> list)
+        static void PrintData(List<int> list, int count, long time)
         {
-            List<int> result = new List<int>();
-            result.AddRange(list);
-
-            Stopwatch timer = new Stopwatch();
-            timer.Start();
-            
-            int count = 0;
-            for (int i = 1; i <= result.Count; i++)
-            {
-                for (int j = 0; j < result.Count - 1; j++)
-                {
-                    if (result[j] > result[j + 1])
-                    {
-                        result.Swap(j, j + 1);
-                    }
-                }
-
-                count = i;
-            }
-
-            timer.Stop();
-
-            return (result, count, timer.ElapsedMilliseconds);
-        }
-
-        static (List<int> list, int count, long time) BubbleSortSwappedCheck(List<int> list)
-        {
-            List<int> result = new List<int>();
-            result.AddRange(list);
-
-            Stopwatch timer = new Stopwatch();
-            timer.Start();
-
-            int count = 0;
-            for (int i = 1; i <= result.Count - 1; i++)
-            {
-                int swapped = 0;
-                for (int j = 0; j < result.Count - i; j++)
-                {
-                    if (result[j] > result[j + 1])
-                    {
-                        result.Swap(j, j + 1);
-                        swapped++;
-                    }
-                }
-
-                count = i;
-
-                if (swapped == 0) break;
-            }
-
-            timer.Stop();
-
-            return (result, count, timer.ElapsedMilliseconds);
-        }
-
-        static (List<int> list, int count, long time) BubbleSelectionSort(List<int> list)
-        {
-            List<int> result = new List<int>();
-            result.AddRange(list);
-
-            Stopwatch timer = new Stopwatch();
-            timer.Start();
-
-            int count = 0;
-            for (int i = 1; i <= result.Count - 1; i++)
-            {
-                int swapped = 0;
-                int min = i;
-                for (int j = i; j < result.Count - i; j++)
-                {
-                    if (result[j] > result[j + 1])
-                    {
-                        result.Swap(j, j + 1);
-                        swapped++;
-                    }
-
-                    if (result[j] < result[min])
-                    {
-                        min = j;
-                    }
-                }
-
-                count = i;
-
-                if (swapped == 0) break;
-
-                if (min != i)
-                {
-                    result.Swap(i, min);
-                }
-            }
-
-            timer.Stop();
-
-            return (result, count, timer.ElapsedMilliseconds);
+            Console.WriteLine(string.Format("A = [{0}], count = {1}, time = {2}",
+                string.Join(", ", list),
+                count, time));
         }
     }
 }
