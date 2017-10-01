@@ -9,7 +9,7 @@ namespace saray
     {
         static void Main(string[] args)
         {
-            List<int> A = RandomList.InitialIntList(10);
+            List<int> A = RandomList.InitialIntListFirstCount(10);
 
             var result = CalculateLR(A);
 
