@@ -10,7 +10,7 @@ namespace bubble
         {
             for (int i = 0; i < 2; i++)
             {
-                List<int> A = RandomList.InitialIntList(30000, 15000);
+                List<int> A = RandomList.InitialIntList(30000, 10);
 
                 var bubble = new BubbleSort(A);
 

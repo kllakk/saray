@@ -113,11 +113,11 @@ namespace StuffLibrary
             timer.Start();
 
             int count = 0;
-            for (int i = 1; i <= result.Count - 1; i++)
+            for (int i = 0; i <= result.Count - 1; i++)
             {
                 int swapped = 0;
                 int min = i;
-                for (int j = i; j < result.Count - i; j++)
+                for (int j = i; j < result.Count - 1; j++)
                 {
                     if (result[j] > result[j + 1])
                     {
