@@ -4,6 +4,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "saray", "saray\saray.csproj", "{433E7DB6-A769-4F8E-A460-68F85A14E7D6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{94AF55A3-9E84-417D-AA94-239C3584144E} = {94AF55A3-9E84-417D-AA94-239C3584144E}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bubble", "bubble\bubble.csproj", "{7B827FB3-0ECE-4B83-9CD9-B432CFCB9DB8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{94AF55A3-9E84-417D-AA94-239C3584144E} = {94AF55A3-9E84-417D-AA94-239C3584144E}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StuffLibrary", "StuffLibrary\StuffLibrary.csproj", "{94AF55A3-9E84-417D-AA94-239C3584144E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +25,14 @@ Global
 		{433E7DB6-A769-4F8E-A460-68F85A14E7D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{433E7DB6-A769-4F8E-A460-68F85A14E7D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{433E7DB6-A769-4F8E-A460-68F85A14E7D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B827FB3-0ECE-4B83-9CD9-B432CFCB9DB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B827FB3-0ECE-4B83-9CD9-B432CFCB9DB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B827FB3-0ECE-4B83-9CD9-B432CFCB9DB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B827FB3-0ECE-4B83-9CD9-B432CFCB9DB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94AF55A3-9E84-417D-AA94-239C3584144E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94AF55A3-9E84-417D-AA94-239C3584144E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94AF55A3-9E84-417D-AA94-239C3584144E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94AF55A3-9E84-417D-AA94-239C3584144E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

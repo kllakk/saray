@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using StuffLibrary;
 
 namespace saray
 {
@@ -8,7 +9,7 @@ namespace saray
     {
         static void Main(string[] args)
         {
-            List<int> A = InitialA();
+            List<int> A = RandomList.InitialIntList(10);
 
             var result = CalculateLR(A);
 
@@ -17,22 +18,6 @@ namespace saray
             Console.WriteLine(string.Format("R: [{0}]", string.Join(", ", result.R)));
 
             Console.ReadLine();
-        }
-
-        static List<int> InitialA()
-        {
-            Random r = new Random();
-            int count = r.Next(1, 10000);
-
-            List<int> result = new List<int>();
-            result.Add(count);
-            for (int i = 0; i < count; i++)
-            {
-                int rnd = r.Next(0, 10000);
-                result.Add(rnd);
-            }
-
-            return result;
         }
 
         static (List<int> L, List<int> R) CalculateLR(List<int> A)
