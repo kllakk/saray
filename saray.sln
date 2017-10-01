@@ -16,6 +16,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StuffLibrary", "StuffLibrary\StuffLibrary.csproj", "{94AF55A3-9E84-417D-AA94-239C3584144E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "binarytree", "binarytree\binarytree.csproj", "{1DCC4015-7ECA-4281-B59F-1C36DA8691A2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{94AF55A3-9E84-417D-AA94-239C3584144E} = {94AF55A3-9E84-417D-AA94-239C3584144E}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
